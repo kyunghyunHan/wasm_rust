@@ -10,4 +10,4 @@ cargo install trunk
 ## start
 ```
 trunk serve
-```
+```# wasm_rust
