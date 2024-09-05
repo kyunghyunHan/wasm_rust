@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="module">
+        import init, { greet } from './wasm_rust-fc56cda6cf006333.js'; // `pkg` 폴더 내 파일 경로 확인
+        await init("wasm_rust-fc56cda6cf006333_bg.wasm");
+        greet("a");
+
+    </script>
+</body>
+
+</html>
