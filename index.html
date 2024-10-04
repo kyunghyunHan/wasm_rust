@@ -10,12 +10,11 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module">
-        console.log(1);
 
-        import init, { greet } from './wasm_rust-1f97afce2c7a52cd.js'; // `pkg` 폴더 내 파일 경로 확인
-        console.log(1);
-        await init("./wasm_rust-1f97afce2c7a52cd_bg.wasm");
+        import init, { greet  ,consolelog} from './wasm_rust-722ac1f0cbafd832.js'; // `pkg` 폴더 내 파일 경로 확인
+        await init("./wasm_rust-722ac1f0cbafd832_bg.wasm");
         greet("a");
+        consolelog("1")
     </script>
 </body>
 
