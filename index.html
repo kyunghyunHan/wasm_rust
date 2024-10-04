@@ -11,10 +11,12 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module">
 
-        import init, { greet  ,consolelog} from './wasm_rust-722ac1f0cbafd832.js'; // `pkg` 폴더 내 파일 경로 확인
-        await init("./wasm_rust-722ac1f0cbafd832_bg.wasm");
-        greet("a");
-        consolelog("1")
+        import init, { run } from './wasm_rust-43cc1eda9a746299.js'; // `pkg` 폴더 내 파일 경로 확인
+        await init("./wasm_rust-43cc1eda9a746299_bg.wasm");
+        // greet("a");
+        // log("1");
+        run("1")
+
     </script>
 </body>
 
