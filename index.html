@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wasm Example</title>
 </head>
-
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <h1>Wasm 덧셈 예제</h1>
+    <p id="result"></p>
+
     <script type="module">
+        import init, { add } from "./pkg/wasm_rust.js";
 
-        import init, { run } from './wasm_rust-43cc1eda9a746299.js'; // `pkg` 폴더 내 파일 경로 확인
-        await init("./wasm_rust-43cc1eda9a746299_bg.wasm");
-        // greet("a");
-        // log("1");
-        run("1")
+        async function run() {
+            // Wasm 모듈 초기화
+            await init();
+            // add 함수 호출
+            const result = add(5, 7);
+            document.getElementById("result").textContent = `5 + 7 = ${result}`;
+        }
 
+        run();
     </script>
 </body>
-
 </html>
